@@ -211,6 +211,30 @@
         .group-leader {
             font-weight: bold;
         }
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #3498db;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            margin-right: 5px;
+            border-radius: 5px 5px 0 0;
+        }
+        .tab.active {
+            background-color: #3498db;
+            color: white;
+            border-bottom: 2px solid #3498db;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -219,6 +243,23 @@
         
         <div class="content">
             <h1>CSE2001TIEC - 25th Year Get Together </h1>
+            
+            <div class="tabs">
+                <div class="tab" onclick="showTab('invitation')">Invitation</div>
+                <div class="tab active" onclick="showTab('planning')">Planning</div>
+                <div class="tab" onclick="showTab('logistics')">Logistics</div>
+                <div class="tab" onclick="showTab('tasks')">Tasks</div>
+                <div class="tab" onclick="showTab('photos')">Photos</div>
+            </div>
+            
+            <div id="invitation" class="tab-content">
+                <div class="letter">
+                    <h3>Invitation</h3>
+                    <p>Coming soon... Formal invitation details will be available here.</p>
+                </div>
+            </div>
+            
+            <div id="planning" class="tab-content active">
             
             <div class="preferences-section">
                 <h3 style="color: #2c3e50; margin-top: 0;">Reunion Preferences</h3>
@@ -245,7 +286,7 @@
                         <li>Work out the best possible dates & location for the get-together</li>
                         <li>Gather their current location, preferred location for the get-together event, constraints if any, help needed, etc.</li>
                         <li>Periodically update the member status using the Google Forms integrated with this page. </li>
-                        <li>You have to motivate your group members to attend this 25th get-together of our batch in our lifetime</li>
+                        <li>You have to motivate your group members to attend this one last get-together of our batch in our lifetime</li>
                     </ul>
                 </div>
             </div>
@@ -406,6 +447,28 @@
             <div class="letter" style="margin-top: 30px;">
                 <h3 style="color: #2c3e50; margin-top: 0;">Security</h3>
                 <p>All those security nerds trying to verify if this page is stealing or tracking your data, you can review the repository for the static page here: <a href="https://github.com/cse2001tiec/get-together" target="_blank" style="color: #3498db;">https://github.com/cse2001tiec/get-together</a></p>
+            </div>
+            </div>
+            
+            <div id="logistics" class="tab-content">
+                <div class="letter">
+                    <h3>Logistics</h3>
+                    <p>Coming soon... Travel arrangements, accommodation details, and venue information will be available here.</p>
+                </div>
+            </div>
+            
+            <div id="tasks" class="tab-content">
+                <div class="letter">
+                    <h3>Tasks</h3>
+                    <p>Coming soon... Task assignments and volunteer coordination will be available here.</p>
+                </div>
+            </div>
+            
+            <div id="photos" class="tab-content">
+                <div class="letter">
+                    <h3>Photos</h3>
+                    <p>Coming soon... Photo gallery and memories from our college days will be available here.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -635,11 +698,30 @@ Muthu (Group Lead), Y
             }
         }
         
+        // Tab switching function
+        function showTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
+        
         // Add footer with timestamp
         window.addEventListener('load', function() {
             const footer = document.createElement('div');
             footer.style.cssText = 'text-align: center; padding: 20px; color: #666; font-size: 12px; border-top: 1px solid #ddd; margin-top: 30px;';
-            footer.innerHTML = `CSE2001TIEC : Status page generated using GenAI tools and Google forms data: ${new Date().toLocaleString()}`;
+            footer.innerHTML = `CSE2001TIEC : github.io pages generated using GenAI tools and Google forms data: ${new Date().toLocaleString()}`;
             document.querySelector('.container').appendChild(footer);
         });
     </script>
