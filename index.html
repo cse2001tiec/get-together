@@ -255,6 +255,11 @@
             <div id="invitation" class="tab-content">
                 <div class="letter">
                     <h3>Invitation</h3>
+                    <div style="text-align: center; background-color: #e8f4fd; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                        <h2 style="color: #2c3e50; margin-bottom: 10px;">Countdown for Get Together</h2>
+                        <div id="countdown" style="font-size: 24px; font-weight: bold; color: #3498db;"></div>
+                        <p style="margin-top: 10px; color: #666;">July 25th, 2026 (Date will be updated soon)</p>
+                    </div>
                     <p>Coming soon... Formal invitation details will be available here.</p>
                 </div>
             </div>
@@ -717,8 +722,32 @@ Muthu (Group Lead), Y
             event.target.classList.add('active');
         }
         
+        // Countdown timer function
+        function updateCountdown() {
+            const eventDate = new Date('July 25, 2026 00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            const countdownElement = document.getElementById('countdown');
+            if (countdownElement) {
+                if (distance > 0) {
+                    countdownElement.innerHTML = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+                } else {
+                    countdownElement.innerHTML = 'Event has started!';
+                }
+            }
+        }
+        
         // Add footer with timestamp
         window.addEventListener('load', function() {
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+            
             const footer = document.createElement('div');
             footer.style.cssText = 'text-align: center; padding: 20px; color: #666; font-size: 12px; border-top: 1px solid #ddd; margin-top: 30px;';
             footer.innerHTML = `CSE2001TIEC : github.io pages generated using GenAI tools and Google forms data: ${new Date().toLocaleString()}`;
