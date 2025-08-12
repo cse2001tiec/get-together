@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSE 2001 TIEC Batch Reunion</title>
+    <title>CSE 2001 TIEC Batch Reunion - Planning</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -267,6 +267,25 @@
             <div id="planning" class="tab-content active">
             
             <div class="preferences-section">
+                <h3 style="color: #2c3e50; margin-top: 0;">Core Committee Members</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+                    <div>• Anoop Nair</div>
+                    <div>• Benny Rajesh</div>
+                    <div>• Venkateshwaran</div>
+                    <div>• Swapna</div>
+                    <div>• Sinthu</div>
+                    <div>• Muthu</div>
+                    <div>• Durga</div>
+                    <div>• Pradeep Cherian</div>
+                    <div>• Jino</div>
+                    <div>• Ullas</div>
+                    <div>• Kiran</div>
+                    <div>• Rinu</div>
+                    <div>• Nihilson</div>
+                </div>
+            </div>
+            
+            <div class="preferences-section">
                 <h3 style="color: #2c3e50; margin-top: 0;">Reunion Preferences</h3>
                 <div class="preference-item">
                     <strong>Date Options:</strong> July 25th 2026 | August 10th 2026
@@ -278,7 +297,7 @@
                     <strong>Family Preferences:</strong> Classmates only or Family Included
                 </div>
             </div>
-            
+
             <div class="letter">
                 <p>While the entire CSE class is united, GenAI has identified the following 12 sub-groups in our class. Smaller groups are easy to manage and are not a bad thing. While you know LLMs can hallucinate, these groups can be inaccurate, and if you want to move to a different group, please reach out and we are happy to move you.</p>
                 
@@ -464,8 +483,139 @@
             
             <div id="tasks" class="tab-content">
                 <div class="letter">
-                    <h3>Tasks</h3>
-                    <p>Coming soon... Task assignments and volunteer coordination will be available here.</p>
+                    <h3>Task Tracker</h3>
+                    <table class="form-table">
+                        <thead>
+                            <tr>
+                                <th>Task Name</th>
+                                <th>Owner</th>
+                                <th>Due Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr onclick="openTaskModal('Form the core committee', 'TBD', 'xx-xx-2025', 'Pending', 'Form core committee with Leader, Treasurer, and Members')" style="cursor: pointer;">
+                                <td>Form the core committee</td>
+                                <td>TBD</td>
+                                <td>xx-xx-2025</td>
+                                <td><span style="color: #f39c12;">Pending</span></td>
+                            </tr>
+                            <tr onclick="openTaskModal('First meeting of core committee', 'Core Committee', 'xx-xx-2025', 'Not Started', 'Initial meeting to discuss event planning')" style="cursor: pointer;">
+                                <td>First meeting of core committee</td>
+                                <td>Core Committee</td>
+                                <td>xx-xx-2025</td>
+                                <td><span style="color: #e74c3c;">Not Started</span></td>
+                            </tr>
+                            <tr onclick="openTaskModal('Decision on tentative dates', 'Core Committee', 'xx-xx-2025', 'Not Started', 'Finalize possible dates for the event')" style="cursor: pointer;">
+                                <td>Decision on tentative dates</td>
+                                <td>Core Committee</td>
+                                <td>xx-xx-2025</td>
+                                <td><span style="color: #e74c3c;">Not Started</span></td>
+                            </tr>
+                            <tr onclick="openTaskModal('Decision on location', 'Location Committee', 'xx-xx-2025', 'Not Started', 'Choose venue for the event')" style="cursor: pointer;">
+                                <td>Decision on location</td>
+                                <td>Location Committee</td>
+                                <td>xx-xx-2025</td>
+                                <td><span style="color: #e74c3c;">Not Started</span></td>
+                            </tr>
+                            <tr onclick="openTaskModal('CSE only or with main TIEC batch', 'Core Committee', 'xx-xx-2025', 'Not Started', 'Decide scope of the event')" style="cursor: pointer;">
+                                <td>CSE only or with main TIEC batch</td>
+                                <td>Core Committee</td>
+                                <td>xx-xx-2025</td>
+                                <td><span style="color: #e74c3c;">Not Started</span></td>
+                            </tr>
+                            <tr onclick="openTaskModal('Formation of sub groups', 'Group Leaders', 'xx-xx-2025', 'In Progress', 'Create groups for canvasing and participation')" style="cursor: pointer;">
+                                <td>Formation of sub groups</td>
+                                <td>Group Leaders</td>
+                                <td>xx-xx-2025</td>
+                                <td><span style="color: #f39c12;">In Progress</span></td>
+                            </tr>
+                            <tr onclick="openTaskModal('College approval', 'Alumni Relations', 'xx-xx-2025', 'Not Started', 'Get approval from college for the event')" style="cursor: pointer;">
+                                <td>College approval</td>
+                                <td>Alumni Relations</td>
+                                <td>xx-xx-2025</td>
+                                <td><span style="color: #e74c3c;">Not Started</span></td>
+                            </tr>
+                            <tr onclick="openTaskModal('Chief Guest arrangement', 'Event Committee', 'xx-xx-2025', 'Not Started', 'Identify and invite chief guest')" style="cursor: pointer;">
+                                <td>Chief Guest arrangement</td>
+                                <td>Event Committee</td>
+                                <td>xx-xx-2025</td>
+                                <td><span style="color: #e74c3c;">Not Started</span></td>
+                            </tr>
+                            <tr onclick="openTaskModal('Lunch arrangements', 'Catering Committee', 'xx-xx-2025', 'Not Started', 'Organize lunch for all attendees')" style="cursor: pointer;">
+                                <td>Lunch arrangements</td>
+                                <td>Catering Committee</td>
+                                <td>xx-xx-2025</td>
+                                <td><span style="color: #e74c3c;">Not Started</span></td>
+                            </tr>
+                            <tr onclick="openTaskModal('T-Shirt or costume', 'Merchandise Committee', 'xx-xx-2025', 'Not Started', 'Design and order reunion merchandise')" style="cursor: pointer;">
+                                <td>T-Shirt or costume</td>
+                                <td>Merchandise Committee</td>
+                                <td>xx-xx-2025</td>
+                                <td><span style="color: #e74c3c;">Not Started</span></td>
+                            </tr>
+                            <tr onclick="openTaskModal('Identifying sponsors', 'Sponsorship Committee', 'xx-xx-2025', 'Not Started', 'Find sponsors for event funding')" style="cursor: pointer;">
+                                <td>Identifying sponsors</td>
+                                <td>Sponsorship Committee</td>
+                                <td>xx-xx-2025</td>
+                                <td><span style="color: #e74c3c;">Not Started</span></td>
+                            </tr>
+                            <tr onclick="openTaskModal('Individual contributions', 'Finance Committee', 'xx-xx-2025', 'Not Started', 'Decide on individual contribution amounts')" style="cursor: pointer;">
+                                <td>Individual contributions</td>
+                                <td>Finance Committee</td>
+                                <td>xx-xx-2025</td>
+                                <td><span style="color: #e74c3c;">Not Started</span></td>
+                            </tr>
+                            <tr onclick="openTaskModal('Total cost estimation', 'Finance Committee', 'xx-xx-2025', 'Not Started', 'Calculate total event costs')" style="cursor: pointer;">
+                                <td>Total cost estimation</td>
+                                <td>Finance Committee</td>
+                                <td>xx-xx-2025</td>
+                                <td><span style="color: #e74c3c;">Not Started</span></td>
+                            </tr>
+                            <tr onclick="openTaskModal('Digital and printed invitations', 'Communications Committee', 'xx-xx-2025', 'Not Started', 'Create and distribute invitations')" style="cursor: pointer;">
+                                <td>Digital and printed invitations</td>
+                                <td>Communications Committee</td>
+                                <td>xx-xx-2025</td>
+                                <td><span style="color: #e74c3c;">Not Started</span></td>
+                            </tr>
+                            <tr onclick="openTaskModal('Banners and displays', 'Decoration Committee', 'xx-xx-2025', 'Not Started', 'Design and setup event banners')" style="cursor: pointer;">
+                                <td>Banners and displays</td>
+                                <td>Decoration Committee</td>
+                                <td>xx-xx-2025</td>
+                                <td><span style="color: #e74c3c;">Not Started</span></td>
+                            </tr>
+                            <tr onclick="openTaskModal('Gifts and memorabilia', 'Merchandise Committee', 'xx-xx-2025', 'Not Started', 'Arrange gifts and swags for attendees')" style="cursor: pointer;">
+                                <td>Gifts and memorabilia</td>
+                                <td>Merchandise Committee</td>
+                                <td>xx-xx-2025</td>
+                                <td><span style="color: #e74c3c;">Not Started</span></td>
+                            </tr>
+                            <tr onclick="openTaskModal('Entertainment and talent shows', 'Entertainment Committee', 'xx-xx-2025', 'Not Started', 'Organize entertainment programs')" style="cursor: pointer;">
+                                <td>Entertainment and talent shows</td>
+                                <td>Entertainment Committee</td>
+                                <td>xx-xx-2025</td>
+                                <td><span style="color: #e74c3c;">Not Started</span></td>
+                            </tr>
+                            <tr onclick="openTaskModal('Dinner and party location', 'Event Committee', 'xx-xx-2025', 'Not Started', 'Arrange dinner venue and party location')" style="cursor: pointer;">
+                                <td>Dinner and party location</td>
+                                <td>Event Committee</td>
+                                <td>xx-xx-2025</td>
+                                <td><span style="color: #e74c3c;">Not Started</span></td>
+                            </tr>
+                            <tr onclick="openTaskModal('Hotel and accommodation', 'Logistics Committee', 'xx-xx-2025', 'Not Started', 'Arrange accommodation for outstation attendees')" style="cursor: pointer;">
+                                <td>Hotel and accommodation</td>
+                                <td>Logistics Committee</td>
+                                <td>xx-xx-2025</td>
+                                <td><span style="color: #e74c3c;">Not Started</span></td>
+                            </tr>
+                            <tr onclick="openTaskModal('Donations for college', 'Alumni Relations', 'xx-xx-2025', 'Not Started', 'Organize donations for college and needy students')" style="cursor: pointer;">
+                                <td>Donations for college</td>
+                                <td>Alumni Relations</td>
+                                <td>xx-xx-2025</td>
+                                <td><span style="color: #e74c3c;">Not Started</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             
@@ -478,7 +628,16 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Task Modal -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeTaskModal()">&times;</span>
+            <h2 id="taskModalTitle">Task Details</h2>
+            <div id="taskModalContent"></div>
+        </div>
+    </div>
+    
+    <!-- Group Modal -->
     <div id="groupModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -701,6 +860,23 @@ Muthu (Group Lead), Y
             if (event.target == modal) {
                 closeModal();
             }
+        }
+        
+        // Task modal functions
+        function openTaskModal(taskName, owner, dueDate, status, notes) {
+            document.getElementById('taskModalTitle').textContent = taskName;
+            document.getElementById('taskModalContent').innerHTML = `
+                <p><strong>Owner:</strong> ${owner}</p>
+                <p><strong>Due Date:</strong> ${dueDate}</p>
+                <p><strong>Status:</strong> ${status}</p>
+                <p><strong>Notes:</strong> ${notes}</p>
+                <p><strong>Meeting Minutes:</strong> No meeting minutes available yet.</p>
+            `;
+            document.getElementById('taskModal').style.display = 'block';
+        }
+        
+        function closeTaskModal() {
+            document.getElementById('taskModal').style.display = 'none';
         }
         
         // Tab switching function
